@@ -22,7 +22,11 @@ class BrowserExtension extends AbstractExternalModule {
     }
 
     public function getAllProjects($username) {
-        $userQuery = "SELECT project_id FROM redcap_user_rights WHERE username = '$username'";
+        $userAdmin = $this->isUserAdmin($username);
+        $userQuery = "SELECT project_id FROM redcap_user_rights";
+        if (!$userAdmin) $userQuery .= " WHERE username = '$username'";
+
+
         $q = db_query($userQuery);
         $projects = array();
         while ($row = db_fetch_assoc($q)) {
