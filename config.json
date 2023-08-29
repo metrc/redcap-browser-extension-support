@@ -18,14 +18,14 @@
   "links": {
     "project": [
       {
-        "name": "Data Quality Export",
-        "icon": "checklist",
+        "name": "Browser Extension Configuration",
+        "icon": "wrench",
         "url": "index.php"
       }
     ]
   },
   "permissions": [
   ],
-  "no-auth-pages": [
-  ]
+  "no-auth-pages": [ "config", "projects" ]
+
 }
