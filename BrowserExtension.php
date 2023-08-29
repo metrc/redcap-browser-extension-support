@@ -21,10 +21,13 @@ class BrowserExtension extends AbstractExternalModule {
         return ($row['username']) ?? false;
     }
 
-    public function getAllProjects($username) {
+    public function getAllProjects($username, $term) {
         $userAdmin = $this->isUserAdmin($username);
-        $userQuery = "SELECT project_id FROM redcap_user_rights";
-        if (!$userAdmin) $userQuery .= " WHERE username = '$username'";
+        $userQuery = "SELECT redcap_user_rights.project_id, redcap_projects.app_title FROM redcap_user_rights, redcap_projects 
+                            WHERE redcap_user_rights.project_id = redcap_projects.project_id AND redcap_projects.app_title LIKE '%$term%'";
+        if (!$userAdmin) $userQuery .= " AND  redcap_user_rights.username = '$username'";
+        $userQuery .= " GROUP BY redcap_projects.project_id";
+        $userQuery .= " ORDER BY redcap_projects.app_title ASC";
 
 
         $q = db_query($userQuery);

@@ -8,7 +8,7 @@ if (!$username) {
     die();
 }
 
-$projects = $module->getAllProjects($username);
+$projects = $module->getAllProjects($username, $_GET['term']);
 $projectData = array();
 foreach ($projects as $pid) {
     $projectData[] = $module->getProjectData($pid);
