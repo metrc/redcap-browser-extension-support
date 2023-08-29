@@ -1,0 +1,31 @@
+{
+  "name": "REDCap Browser Extension Support",
+  "description": "supports the browser extension",
+  "documentation": "README",
+  "namespace": "METRC\\BrowserExtension",
+  "versions": [
+    {
+      "0.1.0": "Initial release"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Paige Julianne Sullivan",
+      "email": "psullivan@jhu.edu",
+      "institution": "Johns Hopkins Bloomberg School of Public Health - METRC"
+    }
+  ],
+  "links": {
+    "project": [
+      {
+        "name": "Data Quality Export",
+        "icon": "checklist",
+        "url": "index.php"
+      }
+    ]
+  },
+  "permissions": [
+  ],
+  "no-auth-pages": [
+  ]
+}
