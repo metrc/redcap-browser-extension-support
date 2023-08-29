@@ -7,6 +7,11 @@ use ExternalModules\ExternalModules;
 
 class BrowserExtension extends AbstractExternalModule {
 
+    public function redcap_module_link_check_display($project_id, $link) {
+        if ($this->getAPIToken(USERID, $project_id)) return $link;
+    }
+
+
     public function getAPIToken($user, $project_id) {
         $sql = "SELECT api_token FROM redcap_user_rights WHERE username = '$user' AND project_id = '$project_id' AND api_token IS NOT NULL";
         $q = db_query($sql);

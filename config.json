@@ -19,12 +19,15 @@
     "project": [
       {
         "name": "Browser Extension Configuration",
+        "key": "browser-extension-config",
         "icon": "wrench",
-        "url": "index.php"
+        "url": "index.php",
+        "show_header_and_footer": true
       }
     ]
   },
   "permissions": [
+    "redcap_every_page_top"
   ],
   "no-auth-pages": [ "config", "projects" ]
 
