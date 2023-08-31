@@ -18,13 +18,14 @@ $url .= '&api_token=' . $module->getAPIToken(USERID, PROJECT_ID);
 <p>
 First, you need to install the browser extension from the appropriate store.  You can find the extension here:
     <ul>
-    <li><strong>Firefox: </strong></li>
-    <li><strong>Chrome, Edge, and Opera: </strong></li>
+    <li><strong>Firefox: </strong><br/><br/></li>
+    <li><strong>Chrome, Edge, and Opera: </strong><br/><br/></li>
     <li><strong>Safari: </strong>Under development</li>
 </ul>
 
 </p><p>
 Once you have installed the extension, you need to configure it.  <button onclick="navigator.clipboard.writeText('<?php echo $url ?>');">Click this button</button> to copy your configuration to your clipboard.
+    Do <strong>not</strong> share your configuration URL with anyone.  It contains your API token and anyone with access to it can get a list of your projects.
 </p><p>
 Next, open the extension.  A popup should appear asking for your configuration URL.  Paste the contents of your clipboard in the field and click save.
 </p><p>
