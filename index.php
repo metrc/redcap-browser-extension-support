@@ -6,8 +6,7 @@ $api_token = $module->getAPIToken(USERID, PROJECT_ID);
 
 
 if (!$api_token) {
-    echo '<br>You do not have an API Token for this project. You must request one from your administrator.  You can also access
-        this page in a different project in which you have an API key.';
+    echo '<br>You do not have an API Token for this project. You must request one from your administrator.';
     die();
 }
 
