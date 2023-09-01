@@ -10,8 +10,8 @@ if (!$api_token) {
         this page in a different project in which you have an API key.';
     die();
 }
-$url = $module->getUrl('config.php', true, true);
-$url .= '&api_token=' . $module->getAPIToken(USERID, PROJECT_ID);
+
+$configurationKey = $module->getConfigurationKey(USERID, PROJECT_ID);
 
 ?>
 <h5>REDCap Browser Extension Support</h5>
@@ -24,8 +24,8 @@ First, you need to install the browser extension from the appropriate store.  Yo
 </ul>
 
 </p><p>
-Once you have installed the extension, you need to configure it.  <button onclick="navigator.clipboard.writeText('<?php echo $url ?>');">Click this button</button> to copy your configuration to your clipboard.
-    Do <strong>not</strong> share your configuration URL with anyone.  It contains your API token and anyone with access to it can get a list of your projects.
+Once you have installed the extension, you need to configure it.  <button onclick="navigator.clipboard.writeText('<?php echo $configurationKey ?>');">Click this button</button> to copy your configuration key to your clipboard.
+    Do <strong>not</strong> share your configuration key with anyone.  It contains your API token and anyone with access to it can get a list of your projects.
 </p><p>
 Next, open the extension.  A popup should appear asking for your configuration URL.  Paste the contents of your clipboard in the field and click save.
 </p><p>

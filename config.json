@@ -29,6 +29,6 @@
   "permissions": [
     "redcap_every_page_top"
   ],
-  "no-auth-pages": [ "config", "projects" ]
+  "no-auth-pages": [ "projects" ]
 
 }
