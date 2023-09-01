@@ -9,7 +9,6 @@ First, you need to install the browser extension from the appropriate store.  Yo
     <ul>
     <li><strong>Firefox: </strong><br/><br/></li>
     <li><strong>Chrome, Edge, and Opera: </strong><br/><br/></li>
-    <li><strong>Safari: </strong>Under development</li>
 </ul>
 
 </p><p>
