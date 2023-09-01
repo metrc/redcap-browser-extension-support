@@ -2,16 +2,6 @@
 global $module;
 require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
 
-$api_token = $module->getAPIToken(USERID, PROJECT_ID);
-
-
-if (!$api_token) {
-    echo '<br>You do not have an API Token for this project. You must request one from your administrator.';
-    die();
-}
-
-$configurationKey = $module->getConfigurationKey(USERID, PROJECT_ID);
-
 ?>
 <h5>REDCap Browser Extension Support</h5>
 <p>
@@ -23,8 +13,9 @@ First, you need to install the browser extension from the appropriate store.  Yo
 </ul>
 
 </p><p>
-Once you have installed the extension, you need to configure it.  <button onclick="navigator.clipboard.writeText('<?php echo $configurationKey ?>');">Click this button</button> to copy your configuration key to your clipboard.
-    Do <strong>not</strong> share your configuration key with anyone.  It contains your API token and anyone with access to it can get a list of your projects.
+Once you have installed the extension, you need to configure it.  <button onclick="navigator.clipboard.writeText('<?php echo $module->getConfigurationKey(USERID, PROJECT_ID) ?>');">
+        Click this button</button> to copy your configuration key to your clipboard.
+    <strong>Do not share your configuration key with anyone.</strong>  It contains your API token and anyone with access to it can get a list of your projects.
 </p><p>
 Next, open the extension.  A popup should appear asking for your configuration key.  Paste the contents of your clipboard in the field and click save.
 </p><p>
