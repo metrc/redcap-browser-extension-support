@@ -1,7 +1,6 @@
 <?php
 global $module;
 
-
 $username = $module->validateApiToken(PROJECT_ID, $_GET['api_token']);
 if (!$username) {
     echo '<br>Invalid API Token<br><br>';

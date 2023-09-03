@@ -1,6 +1,7 @@
 {
   "name": "REDCap Browser Extension Support",
-  "description": "supports the browser extension",
+  "description": "\t\nQuickly and Easily Work with REDCap, including jumping straight to records and project management pages. Administrators also get buttons to frequently used system configuration pages.  Read the README before installing on your server for configuration instructions.",
+
   "documentation": "README",
   "namespace": "METRC\\BrowserExtension",
   "versions": [
@@ -29,6 +30,15 @@
   "permissions": [
     "redcap_every_page_top"
   ],
-  "no-auth-pages": [ "projects" ]
+  "no-auth-pages": [ "projects" ],
+
+  "framework_version": 12,
+
+  "compatibility": {
+    "php-version-min": "7.2.0",
+    "php-version-max": "",
+    "redcap-version-min": "13.1.2",
+    "redcap-version-max": ""
+  }
 
 }
