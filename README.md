@@ -63,5 +63,5 @@ me at [psullivan@jhu.edu](mailto:psullivan@jhu.edu).
 ## Repositories and Downloads
 * GitHub for this module:  https://github.com/metrc/redcap-browser-extension-support
 * GitHub for the browser extension:  https://github.com/metrc/redcap_browser_extension
-* Chrome/Edge/Opera extension:
-* Firefox extension:
+* Chrome/Edge/Opera extension: https://chrome.google.com/webstore/detail/redcap-browser-extension/gplbopmpolkcfokdhjeclihfhnlhleji
+* Firefox extension: https://addons.mozilla.org/en-US/firefox/addon/redcap-browser-extension
