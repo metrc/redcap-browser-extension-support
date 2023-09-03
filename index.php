@@ -9,8 +9,11 @@ First, you need to install the browser extension from the appropriate store.  Yo
     <ul>
     <li><strong>Firefox: </strong><a href="https://addons.mozilla.org/en-US/firefox/addon/redcap-browser-extension/" target="_blank">
             https://addons.mozilla.org/en-US/firefox/addon/redcap-browser-extension/</a><br/><br/></li>
-    <li><strong>Chrome, Edge, and Opera: </strong><br/><br/></li>
-</ul>
+    <li><strong>Chrome, Edge, and Opera: </strong><a href="https://chrome.google.com/webstore/detail/redcap-browser-extension/gplbopmpolkcfokdhjeclihfhnlhleji" target="_blank">
+            https://chrome.google.com/webstore/detail/redcap-browser-extension/gplbopmpolkcfokdhjeclihfhnlhleji</a><br/><br/></li>
+
+    </ul>
+
 
 </p><p>
 Once you have installed the extension, you need to configure it.  <button onclick="navigator.clipboard.writeText('<?php echo $module->getConfigurationKey(USERID, PROJECT_ID) ?>');">
