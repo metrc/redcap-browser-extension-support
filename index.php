@@ -7,7 +7,8 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
 <p>
 First, you need to install the browser extension from the appropriate store.  You can find the extension here:
     <ul>
-    <li><strong>Firefox: </strong><br/><br/></li>
+    <li><strong>Firefox: </strong><a href="https://addons.mozilla.org/en-US/firefox/addon/redcap-browser-extension/" target="_blank">
+            https://addons.mozilla.org/en-US/firefox/addon/redcap-browser-extension/</a><br/><br/></li>
     <li><strong>Chrome, Edge, and Opera: </strong><br/><br/></li>
 </ul>
 
