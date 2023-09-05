@@ -25,13 +25,6 @@
         "icon": "wrench",
         "url": "index.php",
         "show_header_and_footer": true
-      },
-      {
-        "name": "Browser Extension Configuration - Grant All Users Access",
-        "key": "browser-extension-config-grant-all",
-        "icon": "wrench",
-        "url": "grant_all.php",
-        "show_header_and_footer": true
       }
     ]
   },
