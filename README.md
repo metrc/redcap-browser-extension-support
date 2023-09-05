@@ -18,7 +18,7 @@ access to certain users on your system.  I recommend naming it something like
 2. Download this module by downloading through the REDCap Consortium
     or by downloading the code from GitHub and uploading it to your REDCap server.
 3. After downloading the module, enable it in the Control Center.
-4. Enable the module on the new project you created in step 0. 
+4. Enable the module on the new project you created in step 1. 
 5. Go to the project and start adding your users.  The only access they need is
     "API Export".  You can add them to the project
     in any way you want, but I recommend using the "Add / Edit Users" button on
