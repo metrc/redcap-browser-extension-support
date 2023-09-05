@@ -37,7 +37,7 @@ Next, open the extension.  A popup should appear asking for your configuration k
 
 <?php if (SUPER_USER): ?>
 <p><h3>Admin Tools</h3>
-<a href="<?php echo $module->getUrl('grant_all.php'); ?>">Grant all users access to this project</a> (may take a few moments to load while the operation completes)
+<a href="<?php echo $module->getUrl('grant_all.php'); ?>">Grant all users access to this project and generate API keys</a> (may take a few moments to load while the operation completes)
 
     </p>
 <?php endif; ?>
