@@ -27,8 +27,8 @@ class BrowserExtension extends AbstractExternalModule {
     }
 
     public function getAllProjects($username, $term) {
-        $username = db_escape($username);
-        $term = db_escape($term);
+        $username = $this->escape($username);
+        $term = $this->escape($term);
         $userAdmin = $this->isUserAdmin($username);
         $userQuery = "SELECT redcap_user_rights.project_id, redcap_projects.app_title FROM redcap_user_rights, redcap_projects 
                             WHERE redcap_user_rights.project_id = redcap_projects.project_id AND redcap_projects.app_title LIKE '%$term%'";
@@ -44,15 +44,16 @@ class BrowserExtension extends AbstractExternalModule {
     }
 
     public function getProjectData($pid) {
-        $sql = "SELECT project_id as `value`, app_title as `label` FROM redcap_projects WHERE project_id = '$pid'";
-        $q = db_query($sql);
+        $sql = "SELECT project_id as `value`, app_title as `label` FROM redcap_projects WHERE project_id = ?";
+        $q = db_query($sql, [$pid]);
         $row = db_fetch_assoc($q);
+        $row['label'] = $this->escape($row['label']);
         return $row;
     }
 
     public function isUserAdmin($username) {
-        $sql = "SELECT * FROM redcap_user_information WHERE username = '$username' AND super_user = '1'";
-        $q = db_query($sql);
+        $sql = "SELECT * FROM redcap_user_information WHERE username = ? AND super_user = '1'";
+        $q = db_query($sql, [$username]);
         $row = db_fetch_assoc($q);
         return ($row) ? true : false;
     }
@@ -60,8 +61,12 @@ class BrowserExtension extends AbstractExternalModule {
     public function getConfigurationKey($user, $project_id) {
         global $redcap_version, $redcap_base_url;
         $api_token = $this->getAPIToken($user, $project_id);
-        $configuration_key = $redcap_base_url . '|' . $redcap_version . '|' . db_escape($_GET['prefix']) . '|' . $project_id . '|' . $api_token . '|' . $this->isUserAdmin($user);
+        $configuration_key = $this->escape($redcap_base_url . '|' . $redcap_version . '|' . db_escape($_GET['prefix']) . '|' . $project_id . '|' . $api_token . '|' . $this->isUserAdmin($user));
         return $configuration_key;
+    }
+
+    public function escape($string) {
+        return ExternalModules::escape($string);
     }
 
 

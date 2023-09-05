@@ -10,7 +10,7 @@ if (!$username) {
 $projects = $module->getAllProjects($username, $_GET['term']);
 $projectData = array();
 foreach ($projects as $pid) {
-    $projectData[] = $module->getProjectData($pid);
+    $projectData[] = $module->escape($module->getProjectData($pid));
 }
 $json = json_encode($projectData);
 header('Access-Control-Allow-Origin: *');
