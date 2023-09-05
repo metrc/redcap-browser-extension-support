@@ -14,7 +14,7 @@ $sql = "SELECT username FROM redcap_user_information";
 $q = db_query($sql);
 $users = array();
 while ($row = db_fetch_assoc($q)) {
-    $sql = "SELECT * FROM redcap_user_rights WHERE username = ? AND project_id = ?";
+    $sql = "SELECT api_token, api_export FROM redcap_user_rights WHERE username = ? AND project_id = ?";
     $q2 = db_query($sql, [$row['username'], PROJECT_ID]);
     $row2 = db_fetch_assoc($q2);
     if ($row2 == NULL) {
