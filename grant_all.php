@@ -26,8 +26,6 @@ while ($row = db_fetch_assoc($q)) {
     } elseif (!$row['api_export']) {
         $sql = 'UPDATE redcap_user_rights SET api_export = ? WHERE username = ? AND project_id = ?';
         $q3 = db_query($sql, [1, $row['username'], PROJECT_ID]);
-    } else {
-        // echo 'User ' . $row['username'] . ' already has access to this project<br>';
     }
 
 }

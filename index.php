@@ -34,4 +34,12 @@ Next, open the extension.  A popup should appear asking for your configuration k
     If you're already logged into REDCap, you will be taken straight to the record in a new browser tab.  If you're not logged in, you will be prompted to log in and
     then redirected to the record's home page.</p>
 
+
+<?php if (SUPER_USER): ?>
+<p><h3>Admin Tools</h3>
+<a href="<?php echo $module->getUrl('grant_all.php'); ?>">Grant all users access to this project</a> (may take a few moments to load while the operation completes)
+
+    </p>
+<?php endif; ?>
+
 <?php require_once APP_PATH_DOCROOT . 'ProjectGeneral/footer.php';
