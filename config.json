@@ -2,7 +2,7 @@
   "name": "REDCap Browser Extension Support",
   "description": "Quickly and Easily Work with REDCap, including jumping straight to records and project management pages. Administrators also get buttons to frequently used system configuration pages.  Read the README before installing on your server for configuration instructions.",
 
-  "documentation": "README",
+  "documentation": "README.md",
   "namespace": "METRC\\BrowserExtension",
   "versions": [
     {

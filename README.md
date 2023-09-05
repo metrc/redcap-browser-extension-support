@@ -12,12 +12,9 @@ This module provides support for the browser extension that's freely available
 on the browser marketplaces for Chrome, Firefox, Edge, and Opera.
 
 ## Installation and Use - READ THIS FIRST
-0.  ___FOR SECURITY___ create a new empty project.  This project will be used to grant
+1. ___FOR SECURITY___ create a new empty project.  This project will be used to grant
 access to certain users on your system.  I recommend naming it something like
 "Browser Extension Support - DO NOT DELETE" or something similar.
-1.  Download and install the browser extension from the appropriate marketplace
-    for your browser.  The extension is called "REDCap Browser Extension" and is available for
-    Chrome, Firefox, Edge, and Opera.
 2. Download this module by downloading through the REDCap Consortium
     or by downloading the code from GitHub and uploading it to your REDCap server.
 3. After downloading the module, enable it in the Control Center.
