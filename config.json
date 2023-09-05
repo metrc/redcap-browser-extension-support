@@ -6,6 +6,7 @@
   "namespace": "METRC\\BrowserExtension",
   "versions": [
     {
+      "1.0.1": "Added support page for granting all users access to the extension"
       "1.0.0": "Initial release"
     }
   ],
@@ -23,6 +24,13 @@
         "key": "browser-extension-config",
         "icon": "wrench",
         "url": "index.php",
+        "show_header_and_footer": true
+      },
+      {
+        "name": "Browser Extension Configuration - Grant All Users Access",
+        "key": "browser-extension-config-grant-all",
+        "icon": "wrench",
+        "url": "grant_all.php",
         "show_header_and_footer": true
       }
     ]
