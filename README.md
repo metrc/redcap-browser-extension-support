@@ -23,13 +23,21 @@ access to certain users on your system.  I recommend naming it something like
     "API Export".  You can add them to the project
     in any way you want, but I recommend using the "Add / Edit Users" button on
     the project home page if you want to run a pilot project first.
-6. Once the users have been created, generate API keys for all of them by going
-    to the "Manage API Keys" page and clicking "Generate API Key" for each user.
-7. Once the API keys have been generated, go to the "Browser Extension Support" page
-that is now under "External Modules" on the left-hand menu. 
-8. Copy the link to this page and pass it out to your users.  They can then follow the
+
+Once the users have been created, generate API keys for all of them by going
+   to the "Manage API Keys" page and clicking "Generate API Key" for each user.
+
+Once the API keys have been generated, go to the "Browser Extension Support" page
+   that is now under "External Modules" on the left-hand menu.
+
+6. (Alternate) - go to the "Browser Extension Support" page under "External Modules"
+    and click the bottom link that will grant all users on your system access to the
+    project and generate API keys.
+ 
+7. Copy the link to the "Browser Extension Support" page and pass it out to your users.  They can then follow the
 instructions on that page to install the extension and get started.
-9. ___NOTE___:  If you are masquerading as a user (using the "View As User") 
+
+___NOTE___:  If you are masquerading as a user (using the "View As User") 
 option dropdown, the configuration key will be set for the user you actually
 are logged in as, __not__ the user you are masquerading as.  This is a limitation
 of REDCap.  If you want to test the extension as a user, you will need to log in

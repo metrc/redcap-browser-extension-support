@@ -5,7 +5,7 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
 if (!SUPER_USER) die('You must be a super user to run this script');
 
 ?>
-    <h5>REDCap Browser Extension Support - Granting all users access</h5>
+    <h5>REDCap Browser Extension Support</h5>
 <?php
 $db = new RedCapDB();
 
