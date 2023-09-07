@@ -7,7 +7,7 @@ if (!$username) {
     die();
 }
 
-$target_project = $_REQUEST['target_project'];
+$target_project = $module->escape($_REQUEST['target_project']);
 
 // get the highest record number for the target project from redcap_data
 $sql = "SELECT MAX(record) AS max_record FROM redcap_data WHERE project_id = ? GROUP BY record ORDER BY record DESC LIMIT 1";

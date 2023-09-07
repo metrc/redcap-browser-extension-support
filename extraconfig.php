@@ -12,7 +12,7 @@ $returnData['system_admin'] = ($module->isUserAdmin($username));
 $allProjects = $module->getAllProjects($username, '%');
 
 foreach($allProjects as $pid) {
-    $returnData['project_data'][$pid] = $module->getProjectPerms($username, $pid);
+    $returnData['project_data'][$pid] = $module->escape($module->getProjectPerms($username, $pid));
 }
 
 header('Access-Control-Allow-Origin: *');
