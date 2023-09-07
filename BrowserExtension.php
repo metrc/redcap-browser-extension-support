@@ -11,7 +11,6 @@ class BrowserExtension extends AbstractExternalModule {
         if ($this->getAPIToken(USERID, $project_id)) return $link;
     }
 
-
     public function getAPIToken($user, $project_id) {
         $sql = "SELECT api_token FROM redcap_user_rights WHERE username = ? AND project_id = ? AND api_token IS NOT NULL";
         $q = db_query($sql, [$user, $project_id]);
@@ -48,6 +47,13 @@ class BrowserExtension extends AbstractExternalModule {
         $q = db_query($sql, [$pid]);
         $row = db_fetch_assoc($q);
         $row['label'] = $this->escape($row['label']);
+        return $row;
+    }
+
+    public function getProjectPerms($username, $pid) {
+        $sql = "SELECT user_rights, design FROM redcap_user_rights WHERE username = ? AND project_id = ?";
+        $q = db_query($sql, [$username, $pid]);
+        $row = db_fetch_assoc($q);
         return $row;
     }
 

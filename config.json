@@ -6,6 +6,7 @@
   "namespace": "METRC\\BrowserExtension",
   "versions": [
     {
+      "1.1.0": "Added support for new browser extension features",
       "1.0.1": "Added support page for granting all users access to the project (and thus giving them access to the extension)",
       "1.0.0": "Initial release"
     }
@@ -31,7 +32,7 @@
   "permissions": [
     "redcap_every_page_top"
   ],
-  "no-auth-pages": [ "projects" ],
+  "no-auth-pages": [ "projects", "extraconfig", "newrec" ],
 
   "framework_version": 12,
 

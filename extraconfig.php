@@ -7,15 +7,18 @@ if (!$username) {
     die();
 }
 
-$projects = $module->getAllProjects($username, $_GET['term']);
-$projectData = array();
-foreach ($projects as $pid) {
-    $projectData[] = $module->escape($module->getProjectData($pid));
+$returnData['system_admin'] = ($module->isUserAdmin($username));
+
+$allProjects = $module->getAllProjects($username, '%');
+
+foreach($allProjects as $pid) {
+    $returnData['project_data'][$pid] = $module->getProjectPerms($username, $pid);
 }
-$json = json_encode($projectData);
+
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
 header("Content-Type: application/json; charset=UTF-8");
-echo $json;
+
+echo json_encode($returnData);
 die();
