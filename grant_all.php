@@ -23,7 +23,7 @@ while ($row = db_fetch_assoc($q)) {
         $sql = 'INSERT INTO redcap_user_rights (username, project_id, api_export) VALUES (?, ?, ?)';
         $q3 = db_query($sql, [$row['username'], PROJECT_ID, 1]);
         $db->setAPIToken($row['username'], PROJECT_ID);
-        echo "Granted access to {$row['username']}<br>";
+        echo "Granted access and generated API token for {$row['username']}<br>";
         continue;   // don't repeat the operations below
     }
     if (!$row2['api_token']) {
