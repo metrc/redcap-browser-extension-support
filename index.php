@@ -4,9 +4,19 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
 
 ?>
 <h5>REDCap Browser Extension Support</h5>
+    <p><strong>What is the REDCap Browser Extension?</strong> <br/><br/>
+        The browser extension helps you quickly and easily navigate this REDCap server.  You can easily jump directly
+        into a record that already exists or add a new record with a few clicks.  Project and system administrators
+        also get other options to jump right to where they need to be to manage a project or the system.<br/><br/>
+
+        <a href="https://www.youtube.com/watch?v=rrnTLtVGlyM" target="_blank">Watch a video demo of the extension</a><br/><br/>
+    </p>
+
+
+
 <p>
 First, you need to install the browser extension from the appropriate store.  You can find the extension here:<br/><br/>
-    <strong>For Chrome, Chromium, Microsoft Edge, and Opera</strong><br/>
+    <strong>For Chrome, Chromium, Microsoft Edge, Opera, and Brave</strong><br/>
     <a href="https://chrome.google.com/webstore/detail/redcap-browser-extension/gplbopmpolkcfokdhjeclihfhnlhleji" target="_blank">
         <img src="<?php echo $module->getUrl("chrome_store_button.png") ?>" alt="Chrome Web Store"></a><br/><br/>
 
@@ -22,9 +32,12 @@ First, you need to install the browser extension from the appropriate store.  Yo
 Once you have installed the extension, you need to configure it.  <button onclick="navigator.clipboard.writeText('<?php echo $module->getConfigurationKey(USERID, PROJECT_ID) ?>');">
         Click this button</button> to copy your configuration key to your clipboard.
     <strong>Do not share your configuration key with anyone.</strong>  It contains your API token and anyone with access to it can get a list of your projects.
-</p><p>
+</p>
+    <p>
 Next, open the extension.  A popup should appear asking for your configuration key.  Paste the contents of your clipboard in the field and click save.
-</p><p>
+</p>
+
+    <p>
     If a popup window doesn't appear, then you need to select the extension icon in your browser's toolbar.  Right click on it, then select "Configure" or "Options".
     Paste the contents of your clipboard in the field and click save.
 </p>

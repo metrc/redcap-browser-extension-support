@@ -6,7 +6,7 @@
   "namespace": "METRC\\BrowserExtension",
   "versions": [
     {
-      "1.1.1": "Bug fixes for grant_all.php script",
+      "1.1.1": "Bug fixes and added information to user access page (index.php)",
       "1.1.0": "Added support for new browser extension features",
       "1.0.1": "Added support page for granting all users access to the project (and thus giving them access to the extension)",
       "1.0.0": "Initial release"
