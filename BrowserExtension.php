@@ -65,9 +65,9 @@ class BrowserExtension extends AbstractExternalModule {
     }
 
     public function getConfigurationKey($user, $project_id) {
-        global $redcap_version, $redcap_base_url;
+        global $redcap_base_url;
         $api_token = $this->getAPIToken($user, $project_id);
-        $configuration_key = $this->escape($redcap_base_url . '|' . $redcap_version . '|' . db_escape($_GET['prefix']) . '|' . $project_id . '|' . $api_token . '|' . $this->isUserAdmin($user));
+        $configuration_key = $this->escape($redcap_base_url . '|' . '|' . '|' . $project_id . '|' . $api_token . '|');
         return $configuration_key;
     }
 

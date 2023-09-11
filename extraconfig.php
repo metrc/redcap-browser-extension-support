@@ -1,5 +1,5 @@
 <?php
-global $module;
+global $module, $redcap_version;
 
 $username = $module->validateApiToken(PROJECT_ID, $_GET['api_token']);
 if (!$username) {
@@ -8,6 +8,7 @@ if (!$username) {
 }
 
 $returnData['system_admin'] = ($module->isUserAdmin($username));
+$returnData['redcap_version'] = $redcap_version;
 
 $allProjects = $module->getAllProjects($username, '%');
 
