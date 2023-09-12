@@ -32,9 +32,7 @@
       }
     ]
   },
-  "permissions": [
-    "redcap_every_page_top"
-  ],
+
   "no-auth-pages": [ "projects", "extraconfig", "newrec" ],
 
   "framework-version": 12,
