@@ -6,6 +6,7 @@
   "namespace": "METRC\\BrowserExtension",
   "versions": [
     {
+      "1.2.2": "Usability enhancements",
       "1.2.1": "Security enhancements",
       "1.2.0": "Bug fixes and changed configuration data for browser extension",
       "1.1.1": "Bug fixes and added information to user access page (index.php)",

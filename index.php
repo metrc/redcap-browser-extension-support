@@ -9,23 +9,23 @@ require_once APP_PATH_DOCROOT . 'ProjectGeneral/header.php';
         into a record that already exists or add a new record with a few clicks.  Project and system administrators
         also get other options to jump right to where they need to be to manage a project or the system.<br/><br/>
 
-        <a href="https://www.youtube.com/watch?v=rrnTLtVGlyM" target="_blank">Watch a video demo of the extension</a><br/><br/>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rrnTLtVGlyM?si=vFX42WLINoRPYARc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></a></p>
+
+    <p>First, you need to install the browser extension from the appropriate store.  You can find the extension here:</p>
+
+<?php $ua = $_SERVER['HTTP_USER_AGENT'];
+if (stripos($ua, 'chrome') !== false || stripos($ua, 'chromium') !== false || stripos($ua, 'edge') !== false || stripos($ua, 'opera') !== false || stripos($ua, 'brave') !== false): ?>
+    <p><strong>Install the extension for Chrome, Chromium, Microsoft Edge, Opera, and Brave</strong><br/><br/>
+        <a href="https://chrome.google.com/webstore/detail/redcap-browser-extension/gplbopmpolkcfokdhjeclihfhnlhleji" target="_blank">
+            <img src="<?php echo $module->getUrl("chrome_store_button.png") ?>" alt="Chrome Web Store"></a><br/><br/>
     </p>
 
-
-
-<p>
-First, you need to install the browser extension from the appropriate store.  You can find the extension here:<br/><br/>
-    <strong>For Chrome, Chromium, Microsoft Edge, Opera, and Brave</strong><br/>
-    <a href="https://chrome.google.com/webstore/detail/redcap-browser-extension/gplbopmpolkcfokdhjeclihfhnlhleji" target="_blank">
-        <img src="<?php echo $module->getUrl("chrome_store_button.png") ?>" alt="Chrome Web Store"></a><br/><br/>
-
-
-    <strong>For Firefox</strong><br/>
-    <a href="https://addons.mozilla.org/en-US/firefox/addon/redcap-browser-extension/" target="_blank">
-        <img src="<?php echo $module->getUrl("firefox_addon.webp") ?>" alt="Firefox Addons"></a><br/><br/>
-
-</p>
+<?php elseif (stripos($ua, 'firefox') !== false): ?>
+    <p><strong>Install the extension for Firefox</strong><br/><br/>
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/redcap-browser-extension/" target="_blank">
+            <img src="<?php echo $module->getUrl("firefox_addon.webp") ?>" alt="Firefox Addons"></a><br/><br/>
+    </p>
+<?php endif; ?>
 
 
     <p>
