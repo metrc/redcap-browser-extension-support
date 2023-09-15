@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: Data Quality Export Module for REDCap
+title: REDCap Browser Extension Support
 message: >-
   If you use this software, please cite it using the
   metadata from this file.
@@ -10,10 +10,11 @@ authors:
     email: psullivan@jhu.edu
     affiliation: Johns Hopkins University
     orcid: 'https://orcid.org/0009-0002-7041-9547'
-repository-code: 'https://github.com/metrc/redcap-dq-export'
+repository-code: 'https://github.com/metrc/redcap-browser-extension-support'
 abstract: >-
-  This is an external module for REDCap that allows users to
-  export data quality reports to CSV format
+  Quickly and Easily Work with REDCap, including jumping straight to
+  records and project management pages. Administrators also get buttons
+  to frequently used system configuration pages.
 keywords:
   - redcap
   - redcap-external-module
